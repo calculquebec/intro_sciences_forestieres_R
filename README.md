@@ -1,7 +1,7 @@
 # intro_sciences_forestieres_R
 Données et scripts R liés au domaines de la foresterie et des sciences forestières.
 
-Contient 4 fichiers
+Contient 4 fichiers  
 1. CSV: Description d'épinettes blanches fictives dans une situation d'épidémie de tordeuse de bourgeons d'épinettes.
 Charactéristiques des épinettes: Hauteur, DHP, ratio H/D, volume.  
 Division fictive des sites: localisation (a,b,c,d), type de milieux (1,2,3,4)  
