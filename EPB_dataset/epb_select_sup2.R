@@ -35,10 +35,10 @@ par_function <- function(y) {
     glmulti(formula(paste(y, "scale(classe_drainage)+scale(D_index)+scale(defoliation)+scale(epid_age)+scale(light)+scale(dist_from_river)", sep="~")), 
             data=tree_df, random="+(1|loc_id)", fitfunc=lmer.wrap, intercept=TRUE, confsetsize = 10, level=1)
   }, error = function(error) {
-    print(paste("ERROR:  ", error))
-    return(NA)
+	print(paste("ERROR:  ", error))
+  	return(NA)
   })
-  return(out@objects[[1]])
+  return(summary.glmulti(out))
 }
 
 
