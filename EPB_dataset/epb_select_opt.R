@@ -28,7 +28,7 @@ lmer.wrap<-function(formula,data,random="",...){
 t.st<-Sys.time()
 for(y in yvar.list){
   out<-glmulti(formula(paste(y, "scale(classe_drainage)+scale(D_index)+scale(defoliation)+scale(epid_age)+scale(light)+scale(dist_from_river)", sep="~")), 
-                data=tree_df, random="+(1|type)", fitfunc=lmer.wrap, intercept=TRUE, confsetsize = 10, level=1)
+                data=tree_df, random="+(1|loc_id)", fitfunc=lmer.wrap, intercept=TRUE, confsetsize = 10, level=1)
   output.list[[y]]<-out@objects[[1]]
 }
 print(t.fin-t.st)
